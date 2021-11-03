@@ -77,6 +77,7 @@ public class Post extends Fragment {
             @Override
             public void onClick(View view) {
                 String na = name.getText().toString();
+
                 String de = descripcio.getText().toString();
 
                 if (na.equals("") && de.equals("")) {
