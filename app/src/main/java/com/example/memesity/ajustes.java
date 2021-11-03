@@ -3,21 +3,17 @@ package com.example.memesity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Busca#newInstance} factory method to
+ * Use the {@link ajustes#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Busca extends Fragment {
+public class ajustes extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +24,7 @@ public class Busca extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Busca() {
+    public ajustes() {
         // Required empty public constructor
     }
 
@@ -38,11 +34,11 @@ public class Busca extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Busca.
+     * @return A new instance of fragment ajustes.
      */
     // TODO: Rename and change types and number of parameters
-    public static Busca newInstance(String param1, String param2) {
-        Busca fragment = new Busca();
+    public static ajustes newInstance(String param1, String param2) {
+        ajustes fragment = new ajustes();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,12 +59,6 @@ public class Busca extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_busca, container, false);
+        return inflater.inflate(R.layout.fragment_ajustes, container, false);
     }
-
-
-
-
-
-
 }

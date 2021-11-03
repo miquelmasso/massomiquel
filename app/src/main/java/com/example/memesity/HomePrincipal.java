@@ -1,18 +1,25 @@
 package com.example.memesity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.provider.Contacts;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+
+import com.example.memesity.DB.MemesDBHelper;
+import com.example.memesity.Models.Memes;
 
 import java.util.ArrayList;
 
@@ -32,18 +39,20 @@ public class HomePrincipal extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private MemesDBHelper dbHelper;
+    private SQLiteDatabase db;
+
+
     public HomePrincipal() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
+    public HomePrincipal(MemesDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
+    }
+
+
     // TODO: Rename and change types and number of parameters
     public static HomePrincipal newInstance(String param1, String param2) {
         HomePrincipal fragment = new HomePrincipal();
@@ -60,37 +69,59 @@ public class HomePrincipal extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_homeprincipal, container, false);
 
-        ArrayList<String> array_noms = new ArrayList<String>();
-        array_noms.add("Luke Skywalker");
-        array_noms.add("Leia Organa");
-        array_noms.add("Chewbacca");
-        array_noms.add("C3P0");
-        array_noms.add("R2D2");
-        array_noms.add("Darth Vader");
-        array_noms.add("Han Solo");
-        array_noms.add("Luke Skywalker");
-        array_noms.add("Leia Organa");
-        array_noms.add("Chewbacca");
-        array_noms.add("C3P0");
-        array_noms.add("R2D2");
-        array_noms.add("Darth Vader");
-        array_noms.add("Han Solo");
-        array_noms.add("Luke Skywalker");
-        array_noms.add("Leia Organa");
-        array_noms.add("Chewbacca");
-        array_noms.add("C3P0");
-        array_noms.add("R2D2");
-        array_noms.add("Darth Vader");
-        array_noms.add("Han Solo");
+        //MARTA HO HAS FET TU
+        dbHelper = new MemesDBHelper(getContext());
+        db = dbHelper.getWritableDatabase();
 
-
+        ArrayList<Memes> array_memes = dbHelper.getMemes(db);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(array_noms);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, dbHelper, db, array_memes);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((getContext())));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
+        Button buttonDropAll = view.findViewById(R.id.btnDropAll); //button delete all
+        buttonDropAll.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("All memes will be deleted");
+                builder.setMessage("Do you want to continue?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dbHelper.dropAllMemes(db);
+                                refresh();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+            }
+        });
+        LinearLayout post = view.findViewById(R.id.roundbutton);
+        post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new Post(dbHelper, db)).commit();
+            }
+        });
+
+
         return view;
     }
+
+
+    public void refresh() { //this doesn't work xd
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(HomePrincipal.this).attach(HomePrincipal.this).commit();
+    }
+
+
 }
