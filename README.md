@@ -29,7 +29,7 @@ First project delivery
 ## HOMEPRINCIPAL screen
 here when all the list is removed it's empty
 
-![Screenshot_2021-11-03-19-27-51-613_com example memesity](https://user-images.githubusercontent.com/72093965/140171222-6a63fe64-36f6-42ab-ba44-0ea29794de8f.png)
+![Screenshot_2021-11-03-19-27-51-613_com example memesity](https://user-images.githubusercontent.com/72093965/140171222-6a63fe64-36f6-42ab-ba44-0ea29794de8f.png) | width=100)
 
 ## BORRAR button
 drops all the items in the table
