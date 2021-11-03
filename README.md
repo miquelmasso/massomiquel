@@ -3,26 +3,26 @@
 First project delivery
 
 ### M8
-· Login
-· Fragment navigation
-· Data entry form
-· Recycler list to list the data
-· Define the database
-· Define database access methods
-· Delete all data + dialog
+* Login
+* Fragment navigation
+* Data entry form
+* Recycler list to list the data
+* Define the database
+* Define database access methods
+* Delete all data + dialog
 
 
 
 
 ### M7
-· Splash Screen
-· Application logo
-· Defining application colors in Theme.xml
-· Login screen
-· Form screen
-· Recycle View. Item
-· Information Toast / Information SnakBar
-· Homogeneous application design
+* Splash Screen
+* Application logo
+* Defining application colors in Theme.xml
+* Login screen
+* Form screen
+* Recycle View. Item
+* Information Toast / Information SnakBar
+* Homogeneous application design
 
 ### SCREENSHOTS
 
