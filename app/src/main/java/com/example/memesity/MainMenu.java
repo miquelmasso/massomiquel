@@ -3,13 +3,19 @@ package com.example.memesity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 
 import com.example.memesity.DB.MemesDBHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Locale;
 
 public class MainMenu extends AppCompatActivity {
     //Create the instance of dbHelper
@@ -52,6 +58,18 @@ public class MainMenu extends AppCompatActivity {
             return true;
         });
 
+    }
+    void setAppLocale(String localeCode){
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration config = res.getConfiguration();
+
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN_MR1){
+            config.setLocale(new Locale(localeCode.toLowerCase()));
+        } else {
+            config.locale = new Locale(localeCode.toLowerCase());
+        }
+        res.updateConfiguration(config, dm);
     }
 
     //Close the db when the activity onDestroy

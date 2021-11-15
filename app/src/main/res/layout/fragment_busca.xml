@@ -36,7 +36,7 @@
                 android:id="@+id/search"
                 android:layout_width="341dp"
                 android:layout_height="wrap_content"
-                android:hint="Search"
+                android:hint="@string/buscar"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="242dp" />

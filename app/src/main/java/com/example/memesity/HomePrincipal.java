@@ -69,7 +69,6 @@ public class HomePrincipal extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_homeprincipal, container, false);
 
-        //MARTA HO HAS FET TU
         dbHelper = new MemesDBHelper(getContext());
         db = dbHelper.getWritableDatabase();
 
@@ -118,7 +117,7 @@ public class HomePrincipal extends Fragment {
     }
 
 
-    public void refresh() { //this doesn't work xd
+    public void refresh() {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(HomePrincipal.this).attach(HomePrincipal.this).commit();
     }

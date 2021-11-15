@@ -14,17 +14,18 @@
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/drawable/ic_post.xml" value="0.275" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/drawable/roundbutton.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/drawable/splashtheme.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/activity_main.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/activity_main_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/ajustes.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_ajustes.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_busca.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_homeprincipal.xml" value="0.264" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_notificacions.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_perfil.xml" value="0.176" />
+        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_perfil.xml" value="0.2" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/fragment_post.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/inicio.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/item_list.xml" value="0.6" />
-        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/login.xml" value="0.536" />
+        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/item_list.xml" value="0.4" />
+        <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/layout/login.xml" value="0.2" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/menu/bottom_navigation.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/menu/top_navigation.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/miquel.masso/Desktop/DAM2/massomiquel/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11822916666666666" />

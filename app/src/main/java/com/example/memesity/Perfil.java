@@ -1,6 +1,5 @@
 package com.example.memesity;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -59,7 +58,7 @@ public class Perfil extends Fragment {
         ajuste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new ajustes()).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new Ajustes()).commit();
             }
         });
         return view;
